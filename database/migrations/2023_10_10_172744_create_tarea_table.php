@@ -16,7 +16,7 @@ class CreateTareaTable extends Migration
         Schema::create('tarea', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->timestamp('deleted_at');
+            $table->softDeletes();
             $table->string('titulo');
             $table->string('contenido');
             $table->string('estado');
